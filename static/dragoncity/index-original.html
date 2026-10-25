@@ -1,0 +1,947 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Dragon City</title>
+ 
+            <!-- CSS -->
+ 
+ 
+                <link type="text/css" rel="stylesheet" href="//dc-cached-s1.socialpointgames.com/bundles/spsocialdragons/css/style.css?v1377012784" />
+ 
+ 
+ 
+    <!-- JS -->
+        <script class="onerror" type="text/javascript">
+    (function () {
+    var server = "https:\/\/dc-canvas.socialpointgames.com\/dragoncity\/web\/",
+        jsErrorUrl = "\/dragoncity\/web\/log\/error\/js",
+        userId = "100001560160383",
+        stackAll = [],
+        permissionDenied = 'Permission denied',
+        notDefined = 'is not defined';
+ 
+    window.onerror = function (msg, file, line) {
+        if (// Knowed issues (NOT TRACK)
+            // Exception violates the browser's same-origin policy (Script from another domain)
+            msg != 'Script error.' &&
+            // Security exception caused by cross-domain security policy in Flash plug-in.
+            msg.match(/Location.toString/) === null &&
+            // Security exception caused by cross-domain security policy in Flash plug-in.
+            msg.match(/Permission denied to access property 'toString'/) === null &&
+            // Security exception caused by cross-domain security policy in Flash plug-in.
+            msg.slice(0, permissionDenied.length) != permissionDenied
+        ) {
+            file = (server == file.substr(0, server.length)) ? file.substr(server.length) : file;
+ 
+            var params = [
+                'msg='  + encodeURIComponent(msg),
+                'file=' + encodeURIComponent(file),
+                'line=' + encodeURIComponent(line || 0)
+            ].join('&');
+ 
+            if (stackAll.indexOf(params) < 0) {
+                stackAll.push(params);
+ 
+                params += '&user='+ encodeURIComponent(userId || '');
+                params += '&_='+ encodeURIComponent(+new Date);
+ 
+                // Knowed issues (TRACK)
+                if (// Error loading script
+                    msg == 'Error loading script' || msg.slice(- notDefined.length) == notDefined
+                ) { params += '&knowed_issue=1'; }
+ 
+                try {
+                    (new Image()).src = jsErrorUrl + (jsErrorUrl.indexOf('?') >= 0 ? '&' : '?') + params;
+                } catch(e) {
+                    console.log(['Error Tracking JS Errors', params, 'not sended'])
+                }
+            }
+        };
+    };
+}());
+ 
+function trackGameStatus(status) {
+    var userId = "100001560160383",
+        server = "https:\/\/dc-canvas.socialpointgames.com\/dragoncity\/web\/",
+        params = [
+            'user_id=' + userId,
+            'status=' + encodeURIComponent(status)
+        ].join('&');
+ 
+    try {
+        (new Image()).src = server + 'srv/track_game_status.php?' + params;
+    } catch(e) {
+        console.log(['Error Tracking Game Status', status, 'not sended'])
+    }
+}        </script>
+ 
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta property="og:description" content="Breed cool dragons, make them grow and combat with friends in a world of magical islands!" />
+        <link href='//fonts.googleapis.com/css?family=Francois+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+ 
+    </head>
+    <body class="">
+ 
+        <header>
+            <div id="notice"></div>
+ 
+                <iframe id="crosspromotion" class="crosspromotion" width="760" height="60" src="//dynamic.socialpoint.es/crosspromotion/crosspromotion.php?userId=100001560160383&amp;appId=302826159782423"></iframe>
+ 
+ 
+            <div id="offer-banner"></div>
+ 
+                <div id="progressbar" class="progressbar">
+                <div class="text-ios">Now available for iPhone and iPad!</div>
+                <a class="link-ios" target="_blank" href="https://d...content-available-to-author-only...s.com/dragoncity/web/download/iphone?userid=100001560160383&reference_source=dcf_header"></a>
+                <iframe id="fb-ios" class="fb-ios" frameborder="0" width="134px" height="28px" src="https://w...content-available-to-author-only...k.com/plugins/send_to_mobile.php?app_id=302826159782423&size=medium"></iframe>
+ 
+ 
+<ul class="menu-tabs">
+    <li id="menu-tab-free-gifts" title="Free Gifts" class="free-gifts icon gift"  data-global-action="free-gifts" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"  >Free Gifts</span>
+                </li>
+    <li id="menu-tab-play" title="Play Game" class="play"  data-global-action="play" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"  >Play</span>
+                </li>
+    <li id="menu-tab-cash-get" title="Get Gems" class="cash-get icon cash"  data-global-action="cash-get" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"  >Get Gems</span>
+                </li>
+    <li id="menu-tab-cash-gift" title="Gift Gems" class="cash-gift icon cash"  data-global-action="cash-gift" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"  >Gift Gems</span>
+                </li>
+    <li id="menu-tab-cash-earn" title="Earn Gems" class="cash-earn icon cash"  data-global-action="cash-earn" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"  >Earn Gems</span>
+                </li>
+    <li id="menu-tab-invite" title="Invite" class="invite"  data-global-action="invite" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"  >Invite</span>
+                </li>
+    <li id="menu-tab-community" title="Community" class="community submenu normal" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"  >Community</span>
+                    <div class="submenu-tabs">
+                <ul>
+                                                <li id="submenu-tab-fanpage" title="Fan Page" class="community submenu normal">
+                        <span class="deco ldeco"></span>
+                        <span class="deco rdeco"></span>
+                                            <a class="text" href="//www.facebook.com/dragoncitypage" target="_blank">Fan Page</a>
+                                        </li>
+                                    <li id="submenu-tab-forum" title="Forums" class="community submenu normal">
+                        <span class="deco ldeco"></span>
+                        <span class="deco rdeco"></span>
+                                            <a class="text" href="http://f...content-available-to-author-only...s.com/forumdisplay.php?56-Dragon-City" target="_blank">Forums</a>
+                                        </li>
+                                            </ul>
+            <div>
+                </li>
+    <li id="menu-tab-forum" title="Forums" class="menu-forum" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <a class="text" href="http://f...content-available-to-author-only...s.com/forumdisplay.php?56-Dragon-City" target="_blank">Forums</a>
+        </li>
+    <li id="menu-tab-message-center" title="Message Center" class="message-center icon message"  data-global-action="message-center" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"   data-action="counter" >0</span>
+                </li>
+    <li id="menu-tab-language" title="Language selection" class="language submenu icon lang" >
+        <span class="deco ldeco"></span>
+        <span class="deco cdeco"></span>
+        <span class="deco rdeco"></span>
+            <span class="text"  data-global-action="language"  ></span>
+                    <div class="submenu-tabs">
+                <ul>
+                                                <li><a class="selected" href="https://a...content-available-to-author-only...k.com/dragoncity/?language=en" target="_top">English</a></li>
+                                    <li><a href="https://a...content-available-to-author-only...k.com/dragoncity/?language=fr" target="_top">Français</a></li>
+                                    <li><a href="https://a...content-available-to-author-only...k.com/dragoncity/?language=de" target="_top">Deutsch</a></li>
+                                    <li><a href="https://a...content-available-to-author-only...k.com/dragoncity/?language=es" target="_top">Español</a></li>
+                                    <li><a href="https://a...content-available-to-author-only...k.com/dragoncity/?language=tr" target="_top">Türkçe</a></li>
+                                    <li><a href="https://a...content-available-to-author-only...k.com/dragoncity/?language=it" target="_top">Italiano</a></li>
+                                    <li><a href="https://a...content-available-to-author-only...k.com/dragoncity/?language=br" target="_top">Português (Brasil)</a></li>
+                                    <li><a href="https://a...content-available-to-author-only...k.com/dragoncity/?language=tw" target="_top">中文(繁體)</a></li>
+                                            </ul>
+            <div>
+                </li>
+</ul>            </div>
+ 
+        </header>
+        <div id="main" class="main" role="main">
+            <div id="flash" tabindex="1">
+                <div id="flashgame" class="flashgame">
+                    <div class="javascript">Loading JavaScript...</div>
+                    <div class="flash">Checking Flash Player version...</div>
+                    <div class="error"><a class="link" target="_blank" href="http://g...content-available-to-author-only...e.com/flashplayer/">Click here to Update Flash Player Version. Required: %gameVersion%. Detected: %userVersion%.</a></div>
+                </div>
+            </div>
+            <div id="screenshot" class="screenshot"></div>
+            <div id="popupManagerContainer"></div>
+ 
+            <!-- WIDGET TEMPLATES BEGIN -->
+ 
+<script type="text/x-template" id="tmpl-widget">
+    <div class="widget <%= type %>">
+        <div class="widget-header widget-hlines">
+            <div class="lcdeco widget-main"></div>
+            <div class="widget-title widget-repeatx">
+                <div class="ldeco widget-main"></div>
+                <div class="rdeco widget-main"></div>
+                <%= title %>
+            </div>
+            <div class="rcdeco widget-main"><img data-action="close" src="<%= img %>widget/close.png" alt="Close" /></div>
+        </div>
+        <div class="widget-body">
+            <div class="lcdeco widget-vlines">
+                <div class="cdeco widget-main">
+                    <div class="deco"></div>
+                </div>
+                <div class="nav prev" data-action="nav-prev"></div>
+            </div>
+            <div class="bdeco"></div>
+            <div class="tdeco"></div>
+            <div class="ccdeco">
+                <div class="widget-content">
+                    <%= content %>
+                </div>
+            </div>
+            <div class="rcdeco widget-vlines">
+                <div class="cdeco widget-main">
+                    <div class="deco"></div>
+                </div>
+                <div class="nav next" data-action="nav-next"></div>
+            </div>
+        </div>
+        <div class="widget-footer widget-hlines">
+            <div class="lcdeco widget-main"></div>
+            <div class="lrdeco widget-main"></div>
+            <div class="rrdeco widget-main"></div>
+            <div class="rcdeco widget-main"></div>
+        </div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-unitcampaign">
+    <div class="unitcampaign">
+        <div class="image"><img src="<%= img %>" alt="Prize" width="90" height="90" /></div>
+        <p><%= msg %></p>
+        <div class="widget-button widget-repeatx close" data-action="close"><div class="ldeco widget-main"></div><div class="rdeco widget-main"></div>Get Your Prize</div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-freegift">
+    <div class="freegift">
+        <div class="error"></div>
+        <p class="description">Send FREE Gifts to your friends</p>
+<% if (items.length) { %>
+            <ul>
+    <% _.each(items, function(item, index) { %>
+                <li class="<% if (!item.isLocked) { %>un<% } %>locked<% if (item.isLimited) { %> limited<% } %>" title="<%- item.name %>"<% if (!item.isLocked) { %> data-action="send" data-item="<%- item.id %>"<% } %>>
+                    <div class="item">
+                        <span class="img">
+                            <img src="<%= uri %><%= item.iconFile %>" alt="<%= item.name %>" />
+                        </span>
+                        <span class="text">
+                            <%= item.name %>
+                       </span>
+                    </div>
+                    <% if (item.text) { %><p class="info"><span><%= item.text %></span></p><% } %>
+                    <div class="widget-button<% if (item.isLocked) { %> widget-button-disabled<% } %> widget-repeatx"><div class="ldeco widget-main"></div><div class="rdeco widget-main"></div>Send</div>
+                </li>
+    <% }); %>
+            </ul>
+<% } %>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-specialgift">
+    <div class="specialgift" data-action="send">
+        <span class="deco"></span>
+        <div class="text">
+            Everybody likes presents!<br />Help your allies grow their empire by sending them a Mystery Egg!
+        </div>
+        <div class="img">
+            <img src="<%= img %>widget/mysteryegg.png" alt="Mystery Egg" width="145" height="171"/>
+        </div>
+        <div class="widget-button widget-repeatx">
+            <div class="deco ldeco widget-main"></div>
+            <div class="deco rdeco widget-main"></div>
+            Send Gift
+        </div>
+    <% if (receivers.length) { %>
+        <div class="list">
+            <div class="box">
+                <ul>
+        <% _.each(receivers, function(user, index) { %>
+                    <li>
+                        <div>
+                            <img src="https://g...content-available-to-author-only...k.com/<%= user.uid %>/picture?type=square" alt="" width="50" height="50" />
+                            <%= user.name %>
+                        </div>
+                        <span class="deco"></span>
+                    </li>
+        <% }); %>
+                </ul>
+            </div>
+        </div>
+    <% } %>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-store">
+    <% /* console.warn(['storeManager.layout', arguments[0]]) */ %>
+    <div class="store">
+        <div class="header">
+            <ul class="menu widget-list">
+                <li class="switch normal widget-repeatx" data-action="switch" data-switch="normal">
+                    <span class="tab">
+                        Buy with credit card
+                        <span class="image"></span>
+                    </span>
+                </li>
+                <li class="switch mobile widget-repeatx" data-action="switch" data-switch="mobile">
+                    <span class="tab">
+                        Buy with mobile
+                        <span class="image"></span>
+                    </span>
+                </li>
+                                    <li class="switch gift-card widget-repeatx" data-action="switch" data-switch="gift-card">
+                        <span class="tab">
+                            Redeem card
+                            <span class="image"></span>
+                        </span>
+                    </li>
+                            </ul>
+        </div>
+        <div class="packages widget-box widget-repeatx">
+            <div class="table">
+                <table cellspacing="0">
+                    <caption>Select a Package</caption>
+                    <tbody class="package" data-package="normal"><!-- dynamic setup --></tbody>
+                    <tbody class="package" data-package="mobile"><!-- dynamic setup --></tbody>
+                </table>
+            </div>
+        </div>
+                    <div class="giftcard widget-box widget-repeatx">
+                <div class="table">
+                    <table cellspacing="0">
+                        <caption>Redeem a Facebook Gift Card</caption>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="redeem">
+                                        <div class="caption">Facebook Gift Cards</div>
+                                        <div class="widget-button widget-repeatx" data-global-action="redeem-giftcard">
+                                            <div class="ldeco widget-main"></div>
+                                            <div class="rdeco widget-main"></div>
+                                            Redeem now
+                                        </div>
+                                        <a href="https://a...content-available-to-author-only...k.com/fbgiftcards/" target="_blank">
+                                            <div class="widget-button widget-repeatx find-store">
+                                                <div class="ldeco widget-main"></div>
+                                                <div class="rdeco widget-main"></div>
+                                                Find a store
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    *Gems are added to your account after reloading the game
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+                <div class="footer">
+            <div class="payment-security">
+                <div class="deco ldeco"></div>
+                <div class="deco rdeco"></div>
+                <div class="text">
+                    <img src="<%= img %>widget/padlock.png" alt="Secure payment" />
+                    Secure payment
+                </div>
+            </div>
+            <div class="legal-info">
+                <% /* Problems getting Dragon City Gems? <a href="#" data-global-action="faq-fbcredits">Click here to get help</a><br> */ %>
+                All purchases subject to Social Point S.L. <a target="_blank" href="http://w...content-available-to-author-only...t.es/terms_of_service">Terms of Service</a>.
+            </div>
+            <img class="payment-types" src="<%= img %>widget/footer.png" alt="Facebook Credits, Visa, MasterCard, AmEx, Discovery, JCB, PayPal"/>
+            <div class="taxes-info">Prices include all applicable taxes.</div>
+        </div>
+        <div class="ldeco"></div>
+        <div class="rdeco"></div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-store-row">
+    <% /* console.warn(['storeManager.row', arguments[0]]) */ %>
+    <tr data-item="<%= item.id %>" data-item-type="<%= item.type %>" data-action="process-buy">
+        <td class="image">
+            <img src="<%= img %>widget/gems.png" alt="Gems"/>
+        </td>
+        <td class="cash">
+            <div class="number"><%= Math.round(item.cash * (100 + data.bonus) / 100) %></div>
+            <div class="text">Gems</div>
+        </td>
+        <td class="info">
+            <div><%= item.text %></div>
+        </td>
+        <% if (!data.discount) { %>
+        <td class="price">
+            <%= item.currency %>&nbsp;<%= item.price.currency.toFixed(2) %>
+        </td>
+        <% } else { %>
+        <td>
+            <del class="old">
+                <span class="price"><%= item.currency %>&nbsp;<%= item.price.currency.toFixed(2) %></span>
+            </del>
+        </td>
+        <td class="new price">
+            <%= item.currency %>&nbsp;<%= (Math.round(item.price.currency * (100 - data.discount)) / 100).toFixed(2) %>
+        </td>
+        <td class="discount">
+            <div class="amount"><%= data.discount %>%<br/>off!</div>
+        </td>
+        <% } %>
+        <td class="buy">
+            <div class="widget-button widget-repeatx">
+                <div class="ldeco widget-main"></div>
+                <div class="rdeco widget-main"></div>
+                Buy
+            </div>
+        </td>
+    </tr>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-postbuy">
+    <div class="postbuy">
+        <div class="box">
+            <h2 class="title">
+    <% if (count > 0) { %>
+                <%= Math.round(offer.cash * (100 + offer.bonus)) / 100 %>&nbsp; Dragon City Gems <%= offer.text %> for <%= count %> of your friends
+    <% } else { %>
+                <%= Math.round(offer.cash * (100 + offer.bonus)) / 100 %>&nbsp; Dragon City Gems <%= offer.text %>
+    <% } %>
+            </h2>
+            <dl class="text">
+                <dt>
+    Purchase:
+                </dt>
+                <dd>
+    <% if (count > 0) { %>
+                    <%= Math.round(offer.cash * count * (100 + offer.bonus)) / 100 %> DC Gems
+    <% } else { %>
+                    <%= Math.round(offer.cash * (100 + offer.bonus)) / 100 %> DC Gems
+    <% } %>
+                </dd>
+                <dt>
+                    Price:
+                </dt>
+                <dd>
+    <% if (count > 0) { %>
+                <%= offer.currency %>&nbsp; <%= Math.round(offer.price.currency * count * (100 - offer.discount)) / 100 %> (<%= Math.round(offer.credits * count * (100 - offer.discount) / 100) %> credits)
+    <% } else { %>
+                <%= offer.currency %>&nbsp; <%= Math.round(offer.price.currency * (100 - offer.discount)) / 100 %> (<%= Math.round(offer.credits * (100 - offer.discount) / 100) %> credits)
+    <% } %>
+                </dd>
+                <dt>
+                    Transaction:
+                </dt>
+                <dd><%= order %></dd>
+            </dl>
+            <div class="widget-button widget-repeatx print" data-action="print">
+                <div class="deco ldeco widget-main"></div>
+                <div class="deco rdeco widget-main"></div>
+                Print Receipt
+            </div>
+ 
+<% if (count > 0) { %>
+    <img style="display:none" width="1" height="1" border="0" src="//api.nanigans.com/event.php?app_id=9228&type=purchase&name=main&user_id=GhwbwTE8SMAAxGYGarPDji1e6nE&value=<%= Math.round(offer.credits * count * (100 - offer.discount) * .07) %>" />
+<% } else { %>
+    <img style="display:none" width="1" height="1" border="0" src="//api.nanigans.com/event.php?app_id=9228&type=purchase&name=main&user_id=GhwbwTE8SMAAxGYGarPDji1e6nE&value=<%= Math.round(offer.credits * (100 - offer.discount) * .07) %>" />
+<% } %>
+ 
+ 
+ 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/951445735/?value=0&amp;label=9nKRCIHEiAQQ59HXxQM&amp;guid=ON&amp;script=0" />
+ 
+         </div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-postbuy-print">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://w...content-available-to-author-only...3.org/TR/xhtml11/DTD/xhtml11.dtd">
+    <html xmlns="http://w...content-available-to-author-only...3.org/1999/xhtml" xml:lang="es">
+        <head>
+            <title><%= title %></title>
+        </head>
+        <body>
+            <h2>
+    <% if (count > 0) { %>
+        <%= Math.round(offer.cash * (100 + offer.bonus)) / 100 %>&nbsp; Dragon City Gems <%= offer.text %> for <%= count %> of your friends
+    <% } else { %>
+        <%= Math.round(offer.cash * (100 + offer.bonus)) / 100 %>&nbsp; Dragon City Gems <%= offer.text %>
+    <% } %>
+            </h2>
+            <dl class="text">
+                <dt>Purchase:</dt>
+                <dd>
+    <% if (count > 0) { %>
+        <%= Math.round(offer.cash * count * (100 + offer.bonus)) / 100 %> DC Gems
+    <% } else { %>
+        <%= Math.round(offer.cash * (100 + offer.bonus)) / 100 %> DC Gems
+    <% } %>
+                </dd>
+                <dt>Price:</dt>
+                <dd>
+    <% if (count > 0) { %>
+        <%= offer.currency %>&nbsp; <%= Math.round(offer.price.currency * count * (100 - offer.discount)) / 100 %> (<%= Math.round(offer.credits * count * (100 - offer.discount) / 100) %> credits)
+    <% } else { %>
+        <%= offer.currency %>&nbsp; <%= Math.round(offer.price.currency * (100 - offer.discount)) / 100 %> (<%= Math.round(offer.credits * (100 - offer.discount) / 100) %> credits)
+    <% } %>
+                </dd>
+                <dt>Transaction:</dt>
+                <dd><%= order %></dd>
+            </dl>
+        </body>
+    </html>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-giftcash">
+    <% /* console.warn(['giftCashManager', arguments[0]]) */ %>
+    <div class="giftcash">
+        <div class="leftdragon"></div>
+        <div class="rightdragon"></div>
+        <div class="cashstore">
+            <table cellspacing="0">
+                <caption>Choose a package to gift</caption>
+                <tbody class="package">
+        <% _.each(offer, function(item, id) { %>
+                    <tr data-action="select-package" data-item="<%= id %>">
+                        <td class="image giftcash-main"><img src="<%= img %>widget/gem.png" alt="Dragon City Gems" /></td>
+                        <td class="cash"><%= item.cash %>&nbsp;Gems</td>
+                        <td class="text"><%= item.text %></td>
+                        <td class="price"><%= item.currency %>&nbsp;<%= item.price.currency.toFixed(2) %></td>
+                    </tr>
+        <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div class="cashgroup">
+            <div class="cashfriends">
+                <div class="option-box">
+                    <label class="search giftcash-request-main" for="request-search">
+                        <input type="text" id="request-search" size="30" data-action="search" title="Start Typing a Name" value="Start Typing a Name"/>
+                        <span class="deco"></span>
+                    </label>
+                </div>
+                <div class="list-box">
+                    <ul class="unselected-friends list" data-list="unselected-friends"></ul>
+                </div>
+            </div>
+            <div class="cashdata">
+                <div class="selected-friends">
+                    <div data-type="selected-text">Nobody was selected</div>
+                    <ul class="list" data-list="selected-friends"></ul>
+                </div>
+                <div class="cashtotal">
+                    <span class="friends">x <span data-type="friends">0</span> friends</span>
+                    <hr />
+                    <span class="cash"><span data-type="cash">0</span> Gems for <span class="total">&nbsp;<span data-type="currency">$</span>&nbsp; <span data-type="total">0</span></span></span>
+                </div>
+                <div class="widget-button widget-repeatx" data-action="process"><div class="ldeco widget-main"></div><div class="rdeco widget-main"></div><span data-type="send-text">Nobody Selected</span></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="payment-security">
+                <div class="deco ldeco"></div>
+                <div class="deco rdeco"></div>
+                <div class="text">
+                    <img src="<%= img %>widget/padlock.png" alt="Secure payment" />
+                    Secure payment
+                </div>
+            </div>
+            <div class="legal-info">
+                <% /* Problems getting Dragon City Gems? <a href="#" data-global-action="faq-fbcredits">Click here to get help</a><br> */ %>
+                All purchases subject to Social Point S.L. <a target="_blank" href="http://w...content-available-to-author-only...t.es/terms_of_service">Terms of Service</a>.
+            </div>
+            <img class="payment-types" src="<%= img %>widget/footer.png" alt="Facebook Credits, Visa, MasterCard, AmEx, Discovery, JCB, PayPal"/>
+            <div class="taxes-info">Prices include all applicable taxes.</div>
+        </div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-giftcash-friend">
+    <li class="giftcash-request-main" data-action="<%= action %>" data-item="<%= friend.uid %>"><%= friend.name %></li>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-request">
+    <div class="request">
+        <div class="data">
+            <div class="data-box">
+                <ul class="menu widget-list">
+                    <li class="widget-repeatx" data-action="switch" data-type="all">
+                        All Friends
+                    </li>
+                    <li class="widget-repeatx" data-action="switch" data-type="app">
+                        Dragon City Friends
+                    </li>
+                    <li class="widget-repeatx" data-action="switch" data-type="not">
+                        New Friends
+                    </li>
+                </ul>
+                <div class="widget-box widget-repeatx">
+                    <div class="option-box">
+                        <div class="select-all widget-button widget-repeatx" data-action="select-all">
+                            <div class="deco ldeco widget-main"></div>
+                            <div class="deco rdeco widget-main"></div>
+                            <div class="box request-main">
+                                <div class="text">
+                                    <div class="text-box">
+                                        Select All
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="search request-main" for="request-search">
+                            <input type="text" id="request-search" data-action="search" title="Start Typing a Name" value="Start Typing a Name"/>
+                            <span class="deco"></span>
+                        </label>
+                    </div>
+                    <div class="list-box">
+                        <ul class="list group unselected-friends widget-repeatx" data-list="unselected-friends"></ul>
+                        <div class="group selected-friends widget-repeatx">
+                            <div data-type="selected-text">
+                                Nobody was selected
+                            </div>
+                            <ul class="list" data-list="selected-friends"></ul>
+                        </div>
+                        <div class="button">
+                            <div class="send widget-button widget-button-disabled widget-repeatx" data-action="send">
+                                <div class="deco ldeco widget-main"></div>
+                                <div class="deco rdeco widget-main"></div>
+                                <span data-type="send-text">
+                                    Nobody Selected
+                                </span>
+                            </div>
+                        </div>
+                        <div class="progress" data-css="width">
+                            <div class="progress-bg request-repeatx"></div>
+                            <div class="progress-bar request-repeatx" data-type="progress"></div>
+                            <div class="progress-box request-repeatx">
+                                <div class="deco ldeco request-main"></div>
+                                <div class="deco rdeco request-main"></div>
+                                <span data-type="sended">0</span> of <span data-type="total">0</span> friends
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-request-friend">
+    <li class="request-main" data-action="<%= action %>" data-item="<%= friend.uid %>">
+        <%= friend.name %>
+    </li>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-messagemanager">
+    <div class="messagecenter">
+<% if (!messages.length) { %>
+        <div class="nomessages">
+            <p>You have 0 messages</p>
+            <div class="actions">
+                <div class="widget-button widget-repeatx" data-action="goto-freegift"><div class="ldeco widget-main"></div><div class="rdeco widget-main"></div>Send Free Gifts</div>
+                <div class="widget-button widget-repeatx" data-action="closeall"><div class="ldeco widget-main"></div><div class="rdeco widget-main"></div>Play Game</div>
+            </div>
+        </div>
+<% } else { %>
+        <div class="messages messagecenter-separator">
+            <table cellspacing="0">
+                <tbody>
+    <% _.each(messages, function(message, index) { %>
+                    <tr class="message" data-message="<%= message.id %>">
+                        <td class="user" align="left" valign="top">
+                            <div class="group">
+                                <span class="image">
+                                    <img src="https://g...content-available-to-author-only...k.com/<%= message.from.id %>/picture" width="50" height="50" />
+                                </span>
+                                <span class="deco"></span>
+                            </div>
+                        </td>
+                        <td class="text" align="left" valign="top">
+                            <h2 class="title"><%= message.from.name %> says:</h2>
+                            <p><%= message.message %></p>
+                        </td>
+ 
+                        <td class="img" align="center" valign="top">
+        <% if (message.img) { %>
+                            <div class="group">
+                                <span class="image">
+                                    <img src="<%= src + message.img %>" width="65" height="65" alt="<%= message.alt %>" />
+                                </span>
+                                <span class="deco"></span>
+                            </div>
+        <% } %>
+                        </td>
+                        <td class="actions" align="right" valign="top">
+        <% if (!message.accepted || message.giftback.show){ %>
+                            <div class="actions-buttons">
+            <% if (!message.accepted){ %>
+                <% if (message.button){ %>
+                    <% if(message.giftback.show) { %>
+                                <div class="widget-button widget-repeatx" data-action="acceptsendback">
+                                    <div class="ldeco widget-main"></div>
+                                    <div class="rdeco widget-main"></div>
+                                    <%= message.giftback.button %> 
+                                </div>
+ 
+                                <div class="widget-button widget-repeatx acceptonly" data-action="accept">
+                                    <div class="ldeco widget-main"></div>
+                                    <div class="rdeco widget-main"></div>
+                                    <%= message.giftback.acceptonly %>
+                                </div>
+ 
+                    <% } else { %>
+                                <div class="widget-button widget-repeatx" data-action="accept">
+                                    <div class="ldeco widget-main"></div>
+                                    <div class="rdeco widget-main"></div>
+                                    <%= message.button %>
+                                </div>
+                    <% } %>
+                <% } %>
+                <% if (message.process || message.requestback){ %>
+                                <div class="widget-button widget-button-close widget-repeatx" data-action="remove">
+                                    <div class="ldeco widget-main"></div>
+                                    <div class="rdeco widget-main"></div>
+                                    X
+                                </div>
+                <% } %>
+            <% } %>
+                            </div>
+        <% } %>
+        <% if (message.accepted && message.postinfo && message.postinfo.indexOf('%item%') === -1){ %>
+                            <div class="postinfo block" >
+                                <%= message.postinfo %>
+                            </div>
+        <% } %>
+                        </td>
+                        <td class="deco messagecenter-separator"></td>
+                    </tr>
+    <% }); %>
+                </tbody>
+            </table>
+        </div>
+<% } %>
+    <div class="deco"></div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-widget-discountoffer">
+    <div class="discountoffer-popup" data-action="open" data-type="popup">
+        <div class="info offer-20offmod5">
+            Act fast and get discounted Gems now, for limited time only!!!
+        </div>
+        <div class="info offer-30offblack">
+            Limited time Gem offer<br />on <span>Black Friday</span> only!
+        </div>
+        <div class="timeleft">
+            <div class="text">Time left</div>
+            <div class="time" data-item="time"></div>
+        </div>
+        <div class="button">
+            <div class="discountoffer-button">
+                <div class="deco ldeco"></div>
+                <div class="deco rdeco"></div>
+                Get now
+            </div>
+        </div>
+    </div>
+</script>
+ 
+<!-- WIDGET TEMPLATES END -->
+ 
+<!-- COMPLETE TEMPLATES BEGIN -->
+ 
+<script type="text/x-template" id="tmpl-notice">
+    <% /* console.warn(['notice', arguments[0]]) */ %>
+    <div class="notice">
+        <p><%= text %></p>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-poll">
+    <% /* console.warn(['poll', arguments[0]]) */ %>
+    <div class="poll">
+        <div class="box">
+    <% if (poll.ask) { %>
+            <h1 class="question"><%= poll.question %></h1>
+            <div class="answers">
+        <% _.each(poll.answers, function(answer) { %>
+                <div class="answer" data-action="select" data-option="<%= answer[0] %>"><%= answer[1] %></div>
+        <% }); %>
+            </div>
+    <% } else { %>
+            <p>Thanks!</p>
+    <% } %>
+        </div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-offer-layout">
+    <% /* console.warn(['layout', arguments[0]]) */ %>
+    <div class="offers-wrap offers-<%= type %>">
+    <% if (type == 'popup') { %>
+                    <% } else { %>
+            <% } %>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-offer-item">
+    <% /* console.warn(['item', arguments[0]]) */ %>
+    <div class="offer <%= type %>" data-item="<%= uniqId %>" data-origin="<%= origin %>" style="display:none;">
+        <a href="#" class="open-offer" data-action="open-offer">
+            <img src="<%= image %>" alt="" />
+            <span class="countdown">
+                <span class="cell hours"><span class="timer"><%= timer.hours %></span> Hours</span>
+                <span class="cell minutes"><span class="timer"><%= timer.mins %></span> Mins</span>
+                <span class="cell seconds"><span class="timer"><%= timer.secs %></span> Secs</span>
+            </span>
+        </a>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-discountoffer">
+    <div class="discountoffer-banner <%= cssclass %>" data-action="open" data-type="banner">
+        <div class="amount"><%= discount %>% discount</div>
+        <div class="info"><%= discount %>% discount with purchase</div>
+        <div class="button">
+            <div class="discountoffer-button">
+                <div class="deco ldeco"></div>
+                <div class="deco rdeco"></div>
+                Get now
+            </div>
+        </div>
+        <div class="timeleft">
+            <div class="text">Time left</div>
+            <div class="time" data-item="time"></div>
+        </div>
+    </div>
+</script>
+ 
+<script type="text/x-template" id="tmpl-like">
+    <div class="like" data-section="like">
+        <img data-action="close" src="<%= img %>widget/sclose.png" alt="Close" />
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fdragoncitypage&amp;send=false&amp;layout=button_count&amp;width=170&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:170px; height:21px;" allowTransparency="true"></iframe>
+    </div>
+</script>
+ 
+<!-- COMPLETE TEMPLATES END -->
+ 
+<!-- PIXEL TEMPLATES BEGIN -->
+ 
+<script type="text/x-template" id="tmpl-pixel-level">
+                                <% if(level == 2) { $('<img />', {'src': '//api.nanigans.com/event.php?app_id=9228&type=user&name=level_2&user_id=GhwbwTE8SMAAxGYGarPDji1e6nE'}); } %>
+                <% if(level == 5) { $('<img />', {'src': '//api.nanigans.com/event.php?app_id=9228&type=user&name=level_5&user_id=GhwbwTE8SMAAxGYGarPDji1e6nE'}); } %>
+                <% if(level == 15) { $('<img />', {'src': '//api.nanigans.com/event.php?app_id=9228&type=user&name=level_15&user_id=GhwbwTE8SMAAxGYGarPDji1e6nE'}); } %>
+ 
+                                                                                                    </script>
+ 
+<!-- PIXEL TEMPLATES FINISH -->
+ 
+ 
+        </div>
+        <footer>
+ 
+ 
+<div id="footer" class="footer">
+            <div class="banner">
+            <img src="https://d...content-available-to-author-only...s.com/static/dragoncity/img/widget/banner_card.png" data-global-action="redeem-giftcard" alt="Redeem a Facebook Game Card" />
+        </div>
+        <ul class="submenu">
+                    <li id="privacy-policy" title="Privacy Policy">
+                            <a href="http://w...content-available-to-author-only...t.es/privacy_policy" target="_blank">Privacy Policy</a>
+                    </li>
+                 |         <li id="terms-of-service" title="Terms Of Service">
+                            <a href="http://w...content-available-to-author-only...t.es/terms_of_service" target="_blank">Terms Of Service</a>
+                    </li>
+        </ul>
+ 
+    <div class="support">
+        <a href="http://s...content-available-to-author-only...t.es/games/dragon-city/facebook/100001560160383/622094224/" target="_blank" >
+            Help and Support
+            <span>Facebook ID: 100001560160383</span>
+        </a>
+    </div>
+ 
+    <form class="lang" method="get" action="https://a...content-available-to-author-only...k.com/dragoncity/" target="_top">
+        <fieldset>
+            <legend>Language selection:</legend>
+            <select name="language">
+                    <option value="en" selected="selected">English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="es">Español</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="it">Italiano</option>
+                    <option value="br">Português (Brasil)</option>
+                    <option value="tw">中文(繁體)</option>
+                </select>
+            <input type="submit" value="Go" />
+        </fieldset>
+    </form>
+</div>        </footer>
+        <div id="fb-root"></div>
+ 
+ 
+    <!-- JS -->
+ 
+            <script class="vars" type="text/javascript">
+                    var _gaq = _gaq || [];
+                    var translation = {"Your pet":"Your pet","your friend":"your friend","social building":"social building","Check your storage!":"Check your storage!","Message Center":"Message Center","Buy":"Buy","Gift Gems to your Friends":"Gift Gems to your Friends","Thanks For Your Order!":"Thanks For Your Order!","Congratulations!":"Congratulations!","Send Back FREE Gifts to your friend":"Send Back FREE Gifts to your friend","Send FREE Gifts to your friends":"Send FREE Gifts to your friends","Help Your Friends":"Help Your Friends","Free Gifts":"Free Gifts","Gem Discount":"Gem Discount","Get Gems":"Get Gems","Sending":"Sending"};
+        </script>
+ 
+                            <script class="libs" type="text/javascript" src="//dc-cached-s1.socialpointgames.com/js/libs.js?v1377012784"></script>
+ 
+                    <script class="external" type="text/javascript" src="https://s...content-available-to-author-only...n.com/static3/js/api/payment_overlay.js"></script>
+ 
+ 
+ 
+                        <script class="sp" type="text/javascript" src="//dc-cached-s1.socialpointgames.com/js/sp.js?v1377012784"></script>
+ 
+            </head>
+</html>
