@@ -1,0 +1,2 @@
+# assets
+For preservation purposes.
