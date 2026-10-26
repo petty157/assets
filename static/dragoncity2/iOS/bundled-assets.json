@@ -1,0 +1,170 @@
+[
+  {
+    "path": "iOS/defaultlocalgroup_assets_initshared_11f62cc5bbd2aebf09a1cdfd5ff7a89b.bundle",
+    "bytes": 1350,
+    "md5": "4650ddd8e09bf051309d2e72c0b9c83b",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/arenas-inbuild_assets_prf_fogprebattle.prefab_2560dada589ba504e249bded7590dd22.bundle",
+    "bytes": 59527,
+    "md5": "c1928c8665896103b21b594fbad1b103",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragonsui-inbuild_assets_inbuilddragonsui_card_be52b65051194c8ce5406330f58b6331.bundle",
+    "bytes": 433586,
+    "md5": "7d50c71ff0d6d14de401bebe35691767",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragonsui-inbuild_assets_inbuilddragonsui_portrait_94ac2b7ae6ab5bbacc4429c303289e38.bundle",
+    "bytes": 68166,
+    "md5": "982636fdc4bb52948e59164a34e6e15c",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/f8e6903c1d90791e86f0cdf4f99b938e_unitybuiltinshaders_d0420cea46795e09f5b42693821e0369.bundle",
+    "bytes": 39391,
+    "md5": "999d0e243362a0083d0758d2dc5d15f3",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragonsui-inbuild_assets_dragonsui_cardinbuild_6e684bd5717607ef10ee78a445a60931.bundle",
+    "bytes": 11570823,
+    "md5": "865d7253c705c8a2f9ae85c0f3ee2742",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragonsui-inbuild_assets_dragonsui_portraitinbuild_4b479000620566b8307f1a651cafcb6a.bundle",
+    "bytes": 3213121,
+    "md5": "96d499b52d96a7f5309835d599811702",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/arenas-inbuild_scenes_arena_01_fog_495ca3b981133244c3c55a2d13248468.bundle",
+    "bytes": 604402,
+    "md5": "aca830d934f112a326f18cc5f357d31c",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/arenas-inbuild_assets_arena_fog_shared_02872381bf21b0820b53b1ff8835f2ba.bundle",
+    "bytes": 950764,
+    "md5": "497671b0da9a9e032b4897f3c3cd910c",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/animations_41055198c1260eed5b4636cfaa8fe3f6.bundle",
+    "bytes": 12047,
+    "md5": "314c4c85310fa9bb217639e04c26d94c",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/terra/young/prf_terra_young.prefab_69defed7d33800035e7d657800467bd8.bundle",
+    "bytes": 2541356,
+    "md5": "5b6f418288a5976cb6ab96f3832578a5",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/terra/adult/prf_terra_adult.prefab_bd3f9af7a04c71f436d2a223e35478fd.bundle",
+    "bytes": 3245630,
+    "md5": "db6a33f440911e9e2bcdb52d3a891718",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/placeholderlogic/young/prf_placeholderlogic_young.prefab_14375b283ae96c7efb36336ea3d89d58.bundle",
+    "bytes": 3904334,
+    "md5": "828d0f1751c410f413decee8cc4838b5",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/placeholderlogic/adult/prf_placeholderlogic_adult.prefab_36699558cf88599405d047246e95adfe.bundle",
+    "bytes": 2465851,
+    "md5": "c7aa052c0580df084bb70a5a0ebfa766",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/flamingrock/egg/prf_egg_flamingrock.prefab_da8dc3d99128157cdda85b27adc65ea9.bundle",
+    "bytes": 478042,
+    "md5": "82c9a8da97d0c6173a977c8aeb56104e",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/flamingrock/young/prf_flamingrock_young.prefab_ea57ec8354859438252de058ce51a72a.bundle",
+    "bytes": 3779768,
+    "md5": "5b1824cecf89ee26ccd4e20eb48e454b",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/yggdrasil/adult/prf_yggdrasil_adult.prefab_41003eb4916f2d0ebf65e72f62ca7074.bundle",
+    "bytes": 2936140,
+    "md5": "e6d758e1e45edfb9eb5453716166f8ac",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/nature/egg/prf_egg_nature.prefab_db1bd71251d37270ed5bafd9a8e2de0d.bundle",
+    "bytes": 378430,
+    "md5": "38623aae45d1abe99e88a6306c1e3081",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/flame/young/prf_flame_young.prefab_f3cf9576e2ff6659ecb7534c25b4c743.bundle",
+    "bytes": 4929327,
+    "md5": "b8a8d260f8ebc500262522f881c4b8c9",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/electric/egg/prf_egg_electric.prefab_4c5c063c8b5954ea1d17f6a7400be97a.bundle",
+    "bytes": 375576,
+    "md5": "29cd2da9d613a9109e6c623cfbaa593b",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/dragons-inbuild_assets_assets/addressables/dragons/families/sea/egg/prf_egg_sea.prefab_1263cd23c76533e6ccf206f02608b9f3.bundle",
+    "bytes": 380715,
+    "md5": "103856cbdc89b86c85623049e7a0c63a",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/tilemap-inbuild_assets_assets/addressables/tilemap/collectibles/items/itemorbhuge.prefab_b468ae4014e0e58ef69bbbc019be54eb.bundle",
+    "bytes": 181412,
+    "md5": "58424574a565043f7f00f08b649c8679",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/tilemap-inbuild_assets_assets/addressables/tilemap/collectibles/items/itemorbmedium.prefab_53fbff8a1b5db490127fc1cfdf77e454.bundle",
+    "bytes": 180039,
+    "md5": "19d8c543e57d228158765d4c5d448ec0",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/tilemap-inbuild_assets_assets/addressables/tilemap/collectibles/items/itemorbtiny.prefab_1509df4653ebf42fac739f7b4eaec7b4.bundle",
+    "bytes": 180758,
+    "md5": "c0ece18b56a38c5d8ee7cac7ea8ecd34",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/tilemap-inbuild_assets_assets/addressables/tilemap/collectibles/items/itemorbsmall.prefab_0cdb3393a3fbda7fc1bf79bb562631a5.bundle",
+    "bytes": 181332,
+    "md5": "6d722a22f0e5cd8f468ae7f1e2c5b01b",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/tilemap-inbuild_assets_assets/addressables/tilemap/collectibles/items/itemorbsmaller.prefab_9ee60414dd1b5e21371eee7540a7aae8.bundle",
+    "bytes": 181552,
+    "md5": "9875bd5abd41fdd075f7e1df174f95a7",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/tilemap-inbuild_assets_assets/addressables/tilemap/collectibles/items/itemorbbigger.prefab_91c036b5203c4f9b6622165b771b2676.bundle",
+    "bytes": 181125,
+    "md5": "49c36690968c57c5dd771617ba87a38b",
+    "source": "embedded"
+  },
+  {
+    "path": "iOS/tilemap-inbuild_assets_assets/addressables/tilemap/collectibles/items/itemorbbig.prefab_d1e34e0f67a6f9dc26abb7c59fafa1e7.bundle",
+    "bytes": 180634,
+    "md5": "c8fe106d58be3f0917a9d18988837af2",
+    "source": "embedded"
+  }
+]
